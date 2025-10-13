@@ -25,4 +25,24 @@
   font-size: var(--fs-heading-xl);
   font-weight: var(--fw-bold);
   line-height: var(--lh-heading-xl);
+  letter-spacing: var(--ls-heading-xl);
+}
+
+@mixin heading-l() {
+  font-size: var(--fs-heading-l);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading-l);
+  letter-spacing: var(--ls-heading-l);
+}
+
+@mixin heading-m() {
+  font-size: var(--fs-heading-m);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading-m);
+}
+
+@mixin body-l() {
+  font-size: var(--fs-body-l);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body-l);
 }
