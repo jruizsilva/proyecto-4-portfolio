@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 :root {
-  --ff-primary: system-ui, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 
   @each $key, $value in $font-sizes {
     --fs-#{$key}: #{$value};
@@ -13,5 +13,9 @@
 
   @each $key, $value in $colors {
     --clr-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $line-heights {
+    --lh-#{$key}: #{$value};
   }
 }
