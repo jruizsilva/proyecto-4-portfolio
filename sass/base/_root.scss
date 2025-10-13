@@ -18,4 +18,8 @@
   @each $key, $value in $line-heights {
     --lh-#{$key}: #{$value};
   }
+
+  @each $key, $value in $letter-spacing {
+    --ls-#{$key}: #{$value};
+  }
 }

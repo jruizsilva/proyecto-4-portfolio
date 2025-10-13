@@ -20,3 +20,9 @@
   -webkit-line-clamp: $row-number;
   overflow: hidden;
 }
+
+@mixin heading-xl() {
+  font-size: var(--fs-heading-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading-xl);
+}
