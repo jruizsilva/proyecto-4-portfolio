@@ -46,3 +46,15 @@
   font-weight: var(--fw-medium);
   line-height: var(--lh-body-l);
 }
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
