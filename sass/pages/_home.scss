@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .skills {
   border-top: 1px solid var(--clr-white);
   border-bottom: 1px solid var(--clr-white);
@@ -31,5 +33,53 @@
   font-size: 16px;
   letter-spacing: 0px;
   line-height: 26px;
+  color: var(--clr-lightwhite);
+}
+
+.projects {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.projects__h2 {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.projects__cta-container {
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
+
+.projects__btn-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.projects__img {
+  margin-bottom: 20px;
+}
+.projects__h3 {
+  margin-bottom: 16px;
+  @include heading-m();
+}
+
+.projects__stack-list {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+}
+.projects__stack-item {
+  @include body-l();
   color: var(--clr-lightwhite);
 }
