@@ -58,3 +58,25 @@
     @content;
   }
 }
+
+@mixin input {
+  padding-bottom: 16px;
+  padding-left: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid var(--clr-lightwhite);
+  &::placeholder {
+    text-transform: uppercase;
+  }
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.22px;
+  font-weight: 500;
+}
+
+@mixin textarea {
+  @include input();
+  padding-bottom: 80px;
+}
