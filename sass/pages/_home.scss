@@ -1,33 +1,5 @@
 @use "../abstracts" as *;
 
-// hero
-
-.hero {
-  padding-bottom: 80px;
-}
-
-.hero__h2 {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 40px;
-  letter-spacing: -1.14px;
-  margin-bottom: 24px;
-}
-
-.hero__p {
-  font-size: 16px;
-  color: var(--clr-lightwhite);
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.hero__cta-container {
-  display: flex;
-  justify-content: center;
-}
-
 // skills
 
 .skills {
