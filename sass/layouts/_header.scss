@@ -1,79 +1,75 @@
 @use "../abstracts" as *;
 
 .header {
-  padding-bottom: 80px;
+  margin-inline: auto;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  height: 383px;
+  position: relative;
+  @include tablet() {
+    display: flex;
+  }
 }
 
 .header__background {
+  position: absolute;
+  max-width: 375px;
+  width: 100%;
+  height: 383px;
+  inset: 0;
+  margin: auto;
+}
+
+.header__img-container {
   position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 0 auto;
-  width: 375px;
+  height: 383px;
+  margin-inline: auto;
+  width: 174px;
+}
+
+.header__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .header__background::before {
   content: "";
   background-image: url("/lines.svg");
   position: absolute;
-  background-repeat: no-repeat;
   width: 530px;
   top: 124px;
   height: 129px;
+  left: -350px;
 }
+// .header__background::after {
+//   content: "";
+//   background-image: url("/circle.svg");
+//   background-repeat: no-repeat;
+//   position: absolute;
+//   bottom: 40px;
+//   width: 129px;
+//   height: 129px;
+//   right: -67px;
+// }
 
-.header__background::after {
-  content: "";
-  background-image: url("/circle.svg");
-  background-repeat: no-repeat;
+.header__img {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  bottom: 40px;
-  width: 129px;
-  height: 129px;
-  right: -67px;
-}
-
-.header__social-media-container {
-  width: 174px;
-  margin-inline: auto;
-  padding-top: 20px;
-  padding-inline: 10px;
-  background-image: url("/adam.png");
-  height: 383px;
-  background-size: cover;
-  position: relative;
-  margin-bottom: 40px;
+  top: 0;
+  left: 0;
 }
 
 .header__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
 }
 
 .header__title {
   @include heading-m();
   text-align: center;
   margin-bottom: 20px;
-}
-
-.header__h2 {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 40px;
-  letter-spacing: -1.14px;
-  margin-bottom: 24px;
-}
-
-.header__p {
-  font-size: 16px;
-  color: var(--clr-lightwhite);
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.header__cta-container {
-  display: flex;
-  justify-content: center;
 }
