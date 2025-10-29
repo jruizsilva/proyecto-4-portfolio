@@ -29,11 +29,11 @@
     height: 100%;
     top: 0;
     right: 0;
+    left: auto;
   }
 }
 
 .header__wrapper {
-  height: 383px;
   margin-bottom: 40px;
   @include tablet() {
     display: flex;
