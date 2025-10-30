@@ -112,7 +112,11 @@
 .contact {
   padding-top: 60px;
   padding-bottom: 87px;
-  border-bottom: 1px solid white;
+
+  @include tablet() {
+    max-width: 445px;
+    margin-inline: auto;
+  }
 }
 .contact__h3 {
   font-size: 40px;
@@ -121,6 +125,12 @@
   letter-spacing: -1.14px;
   margin-bottom: 20px;
   text-align: center;
+
+  @include tablet() {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
 }
 .contact__p {
   color: var(--clr-lightwhite);
@@ -130,6 +140,10 @@
   letter-spacing: 0px;
   margin-bottom: 50px;
   text-align: center;
+
+  @include tablet() {
+    @include body-l();
+  }
 }
 
 .contact__form {
