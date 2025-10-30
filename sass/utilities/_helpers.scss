@@ -1,5 +1,11 @@
+@use "../abstracts/" as *;
+
 .container {
   padding-inline: 1rem;
+
+  @include tablet() {
+    padding-inline: 2rem;
+  }
 }
 
 .text-highlight {

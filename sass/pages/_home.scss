@@ -7,13 +7,24 @@
   border-bottom: 1px solid var(--clr-white);
   padding-top: 40px;
   padding-bottom: 40px;
+  margin-bottom: 80px;
+
+  @include tablet() {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+  }
 }
 
 .skills__list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
+  gap: 24px;
+
+  @include tablet() {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .skills__item {
@@ -21,6 +32,10 @@
   flex-direction: column;
   gap: 16px;
   align-items: center;
+
+  @include tablet() {
+    align-items: start;
+  }
 }
 
 .skills__h3 {
@@ -41,7 +56,6 @@
 // Projects
 
 .projects {
-  padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
 }
@@ -56,7 +70,7 @@
 .projects__cta-container {
   position: absolute;
   right: 0;
-  top: 80px;
+  top: 0;
 }
 
 .projects__btn-wrapper {
