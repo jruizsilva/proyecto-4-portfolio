@@ -15,6 +15,7 @@
 
   @include desktop() {
     max-width: 1100px;
+    height: 720px;
   }
 }
 .header::after {
@@ -38,6 +39,11 @@
     top: 0;
     right: 0;
     left: auto;
+  }
+
+  @include desktop() {
+    width: 445px;
+    height: 720px;
   }
 }
 
@@ -65,6 +71,10 @@
   @include tablet() {
     height: 600px;
   }
+
+  @include desktop() {
+    height: 720px;
+  }
 }
 
 .header__background::before {
@@ -89,6 +99,11 @@
   width: 129px;
   height: 129px;
   right: -65px;
+
+  @include desktop() {
+    right: 380px;
+    bottom: 70px;
+  }
 }
 
 .header__img {
