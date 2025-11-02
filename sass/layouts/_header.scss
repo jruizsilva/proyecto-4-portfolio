@@ -16,11 +16,12 @@
   @include desktop() {
     max-width: 1100px;
     height: 720px;
+    overflow: visible;
   }
 }
 .header::after {
   content: "";
-  background-image: url("/adam.png");
+  background-image: url("/adam-mobile.png");
   background-size: cover;
   position: absolute;
   width: 174px;
@@ -36,6 +37,7 @@
     width: 322px;
     height: 600px;
     background-position: bottom;
+    background-image: url("/adam.png");
     top: 0;
     right: 0;
     left: auto;
@@ -44,6 +46,7 @@
   @include desktop() {
     width: 445px;
     height: 720px;
+    background-position: center;
   }
 }
 
@@ -59,6 +62,12 @@
     padding-right: 30px;
     height: auto;
     margin-bottom: 90px;
+  }
+  @include desktop() {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 0;
+    padding-right: 30px;
   }
 }
 
@@ -85,6 +94,7 @@
   top: 124px;
   height: 129px;
   left: -350px;
+  z-index: -1;
   @include tablet() {
     top: 86px;
     left: -285px;
@@ -126,11 +136,22 @@
   margin-bottom: 20px;
 }
 
+.header .container {
+  @include desktop() {
+    padding: 0;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+}
+
 // hero
 
 .hero {
   @include tablet() {
     width: 445px;
+  }
+  @include desktop() {
+    width: 706px;
   }
 }
 
@@ -148,6 +169,10 @@
     letter-spacing: -2.05px;
     margin-bottom: 60px;
   }
+  @include desktop() {
+    @include heading-xl();
+    margin-bottom: 43px;
+  }
 }
 
 .hero__p {
@@ -161,12 +186,19 @@
     @include body-l();
     margin-bottom: 34px;
   }
+  @include desktop() {
+    max-width: 445px;
+    margin-bottom: 66px;
+  }
 }
 
 .hero__br {
   display: none;
   @include tablet() {
     display: block;
+  }
+  @include desktop() {
+    display: none;
   }
 }
 
