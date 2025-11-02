@@ -139,6 +139,8 @@
     display: flex;
     justify-content: space-between;
     gap: 220px;
+    padding-bottom: 92px;
+    padding-top: 84px;
   }
 }
 
@@ -163,6 +165,8 @@
 
   @include desktop() {
     text-align: left;
+    @include heading-xl();
+    margin-bottom: 36px;
   }
 }
 .contact__p {
