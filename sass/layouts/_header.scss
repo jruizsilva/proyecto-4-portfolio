@@ -205,6 +205,7 @@
 .hero__cta-container {
   display: flex;
   justify-content: center;
+  position: relative;
 
   @include tablet() {
     justify-content: start;

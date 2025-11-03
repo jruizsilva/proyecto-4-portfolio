@@ -89,9 +89,38 @@
   top: 0;
 }
 
+.projects__image-wrapper {
+  position: relative;
+
+  &:hover .projects__img {
+    opacity: 0.2;
+  }
+
+  &:hover .projects__btn-wrapper-desktop {
+    opacity: 1;
+  }
+}
+
+.projects__btn-wrapper-desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  left: 201px;
+  top: 138px;
+  transition: opacity 0.3s ease;
+  @include desktop() {
+    opacity: 0;
+  }
+}
+
 .projects__btn-wrapper {
   display: flex;
   gap: 30px;
+  @include desktop() {
+    display: none;
+  }
 }
 
 .projects__list {
