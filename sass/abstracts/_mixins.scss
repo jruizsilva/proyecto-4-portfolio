@@ -59,6 +59,34 @@
   }
 }
 
+.form-group {
+  position: relative;
+
+  .error-icon {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    color: var(--clr-red);
+    display: none;
+  }
+
+  .error-msg {
+    position: absolute;
+    bottom: -1.2rem;
+    right: 0;
+    color: var(--clr-red);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: var(--ff-primary);
+    display: none;
+  }
+
+  input:invalid:not(:placeholder-shown) ~ .error-icon,
+  input:invalid:not(:placeholder-shown) ~ .error-msg {
+    display: block;
+  }
+}
+
 @mixin input {
   padding-bottom: 16px;
   padding-left: 24px;
@@ -67,16 +95,32 @@
   outline: none;
   color: white;
   border-bottom: 1px solid var(--clr-lightwhite);
-  &::placeholder {
-    text-transform: uppercase;
-  }
   font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.22px;
   font-weight: 500;
+  width: 100%;
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    border-color: var(--clr-green);
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: var(--clr-red);
+  }
+
+  &:placeholder-shown {
+    border-color: var(--clr-lightwhite);
+  }
 }
 
 @mixin textarea {
   @include input();
   padding-bottom: 80px;
+
+  resize: none;
 }

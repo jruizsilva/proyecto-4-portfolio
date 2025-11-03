@@ -218,25 +218,38 @@
             </p>
           </div>
           <form action="" method="get" class="contact__form">
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              class="contact__input"
-              autocomplete="name"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              class="contact__input"
-              autocomplete="email"
-            />
-            <textarea
-              name="message"
-              placeholder="message"
-              class="contact__textarea"
-            ></textarea>
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                class="contact__input"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                class="contact__input"
+                autocomplete="email"
+                required
+              />
+              <span class="error-icon"
+                ><img src="/alert.svg" alt="alert icon"
+              /></span>
+              <span class="error-msg">Sorry, invalid format here</span>
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="message"
+                class="contact__textarea"
+                required
+              ></textarea>
+            </div>
             <div class="contact__submit-container">
               <input
                 type="submit"
