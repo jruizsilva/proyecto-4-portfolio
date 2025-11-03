@@ -52,6 +52,20 @@
   }
 }
 
+.footer__link {
+  .footer__icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    color: var(--clr-lightwhite);
+    transition: color 0.3s ease;
+  }
+
+  &:hover .footer__icon {
+    color: var(--clr-green);
+  }
+}
+
 .footer__p {
   font-size: 16px;
   color: var(--clr-lightwhite);
