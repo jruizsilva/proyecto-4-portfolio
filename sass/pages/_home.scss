@@ -1,38 +1,45 @@
 @use "../abstracts" as *;
 
-// skills
-
 .skills {
-  border-top: 1px solid var(--clr-white);
-  border-bottom: 1px solid var(--clr-white);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 80px;
-
-  @include tablet() {
-    border-bottom: none;
-    padding-bottom: 0px;
-    margin-bottom: 100px;
-    max-width: 768px;
-    margin-inline: auto;
-  }
-
-  @include desktop() {
-    max-width: 1100px;
-  }
+  padding-bottom: 80px;
+  overflow: hidden;
+  padding-inline: 1rem;
 }
 
 .skills__list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--clr-white);
   gap: 24px;
+  border-bottom: 1px solid var(--clr-white);
+  padding-bottom: 40px;
+  position: relative;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    content: "";
+    background-image: url("/lines.svg");
+    position: absolute;
+    bottom: -65px;
+    right: -344px;
+    width: 530px;
+    height: 129px;
+  }
 
   @include tablet() {
+    max-width: 768px;
     grid-template-columns: repeat(2, 1fr);
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
   }
 
   @include desktop() {
+    max-width: 1100px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -68,8 +75,13 @@
 .projects {
   padding-bottom: 80px;
   position: relative;
-  max-width: 768px;
+
+  max-width: 425px;
   margin-inline: auto;
+
+  @include tablet() {
+    max-width: 768px;
+  }
 
   @include desktop() {
     max-width: 1100px;
@@ -102,16 +114,17 @@
 }
 
 .projects__btn-wrapper-desktop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  position: absolute;
-  left: 201px;
-  top: 138px;
-  transition: opacity 0.3s ease;
+  display: none;
   @include desktop() {
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: absolute;
+    left: 201px;
+    top: 138px;
+    transition: opacity 0.3s ease;
   }
 }
 
